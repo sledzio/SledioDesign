@@ -1,263 +1,428 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Twoje Imię — Portfolio</title>
+    <meta name="description" content="SledioDesign — portfolio projektów graficznych, miniaturek, ilustracji, zdjęć profilowych i logotypów.">
+    <meta name="author" content="Sledio">
+
+    <meta name="theme-color" content="#101010">
+
+    <title>SledioDesign — Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- NAWIGACJA -->
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">PORTFOLIO</a>
 
-            <div class="nav-links">
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="#home" class="logo">
+                <img src="images/logo.svg" alt="SledioDesign">
+            </a>
+
+            <nav class="navigation" aria-label="Menu główne">
+                <a href="#home">Start</a>
                 <a href="#about">O mnie</a>
-                <a href="#projects">Projekty</a>
-                <a href="#skills">Umiejętności</a>
-                <a href="#contact">Kontakt</a>
-            </div>
-        </nav>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Zakres prac</a>
+                <a href="#contact" class="nav-contact">Kontakt ↗</a>
+            </nav>
+
+        </div>
     </header>
 
 
-    <!-- HERO -->
     <main>
 
-        <section class="hero">
-            <div class="hero-content">
+        <!-- STRONA GŁÓWNA -->
 
-                <p class="small-text">CZEŚĆ, JESTEM</p>
+        <section class="hero" id="home">
 
-                <h1>Twoje<br><span>Imię</span></h1>
+            <div class="container hero-content">
 
-                <p class="description">
-                    Student informatyki i grafiki komputerowej.
-                    Tworzę aplikacje, strony internetowe oraz projekty graficzne.
-                </p>
+                <div class="hero-text">
 
-                <div class="buttons">
-                    <a href="#projects" class="button primary">
-                        Zobacz moje projekty
-                    </a>
+                    <span class="section-tag">
+                        SLEDIODESIGN / PORTFOLIO
+                    </span>
 
-                    <a href="#contact" class="button secondary">
-                        Kontakt
-                    </a>
+                    <h1>
+                        Portfolio<br>
+                        <span>SledioDesign.</span>
+                    </h1>
+
+                    <p>
+                        Tworzę różnego rodzaju projekty graficzne —
+                        od miniaturek i ilustracji, przez grafiki,
+                        aż po zdjęcia profilowe i logotypy.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#portfolio" class="button button-primary">
+                            Zobacz portfolio ↗
+                        </a>
+
+                        <a href="#contact" class="button button-secondary">
+                            Kontakt
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-visual-card">
+
+                        <span class="visual-number">
+                            S / DESIGN
+                        </span>
+
+                        <div class="visual-decoration">
+                            S
+                        </div>
+
+                        <span class="visual-caption">
+                            GRAPHIC DESIGN PORTFOLIO
+                        </span>
+
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="hero-decoration">
-                <div class="circle"></div>
-                <div class="code-card">
-                    <span>&lt;</span> creative <span>/&gt;</span>
-                </div>
+
+            <div class="hero-bottom container">
+
+                <span>GRAPHIC DESIGN</span>
+
+                <span>THUMBNAILS · ILLUSTRATIONS · LOGOS</span>
+
             </div>
+
         </section>
+
 
 
         <!-- O MNIE -->
-        <section id="about" class="section">
 
-            <p class="section-label">01 — O MNIE</p>
+        <section class="section about" id="about">
 
-            <h2>Kim jestem?</h2>
+            <div class="container">
 
-            <div class="about-content">
+                <div class="section-heading">
 
-                <div>
+                    <span class="section-tag">
+                        01 / O MNIE
+                    </span>
+
+                    <h2>O mnie.</h2>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <div class="about-main">
+
+                        <p class="about-highlight">
+                            Zajmuję się grafiką komputerową
+                            i stale rozwijam swoje umiejętności.
+                        </p>
+
+                        <p>
+                            Nazywam się Remigiusz, w internecie
+                            działam pod nazwą Sledio. Tworzę
+                            różnorodne projekty graficzne,
+                            eksperymentuję ze stylem i staram
+                            się rozwijać swoje umiejętności.
+                        </p>
+
+                        <p>
+                            Chętnie podejmę się również nowych,
+                            ciekawych projektów, aby zdobywać
+                            doświadczenie i stale rozbudowywać
+                            swoje portfolio.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-side">
+
+                        <div class="about-stat">
+                            <span>01</span>
+                            <p>Miniaturki</p>
+                        </div>
+
+                        <div class="about-stat">
+                            <span>02</span>
+                            <p>Grafiki i ilustracje</p>
+                        </div>
+
+                        <div class="about-stat">
+                            <span>03</span>
+                            <p>Zdjęcia profilowe i logotypy</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PORTFOLIO -->
+
+        <section class="section portfolio" id="portfolio">
+
+            <div class="container">
+
+                <div class="section-heading portfolio-heading">
+
+                    <div>
+
+                        <span class="section-tag">
+                            02 / MOJE PRACE
+                        </span>
+
+                        <h2>Portfolio.</h2>
+
+                    </div>
+
                     <p>
-                        Cześć! Jestem <strong>Twoje Imię</strong>.
-                        Interesuję się informatyką, programowaniem oraz
-                        grafiką komputerową.
+                        Wybrane projekty, grafiki i prace,
+                        nad którymi miałem okazję pracować.
                     </p>
 
-                    <p>
-                        Lubię tworzyć rzeczy od podstaw — od prostych stron
-                        internetowych, przez aplikacje, aż po projekty
-                        graficzne i modele 3D.
-                    </p>
                 </div>
 
-                <div class="info-box">
-                    <div>
-                        <span>01</span>
-                        <p>Programowanie</p>
-                    </div>
 
-                    <div>
-                        <span>02</span>
-                        <p>Grafika komputerowa</p>
-                    </div>
+                <!-- FILTRY -->
 
-                    <div>
-                        <span>03</span>
-                        <p>Web development</p>
-                    </div>
+                <div class="portfolio-filters" aria-label="Filtry portfolio">
+
+                    <button
+                        class="filter active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
+                        Wszystkie
+                    </button>
+
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="thumbnails"
+                        aria-pressed="false">
+                        Miniaturki
+                    </button>
+
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="illustration"
+                        aria-pressed="false">
+                        Grafiki i ilustracje
+                    </button>
+
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="profile"
+                        aria-pressed="false">
+                        Profile i logotypy
+                    </button>
+
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="design"
+                        aria-pressed="false">
+                        Inne projekty
+                    </button>
+
                 </div>
+
+
+                <!-- AUTOMATYCZNA GALERIA -->
+
+                <div
+                    class="projects-grid"
+                    id="projects-grid"
+                    aria-live="polite">
+
+                    <div class="projects-loading">
+                        Ładowanie projektów...
+                    </div>
+
+                </div>
+
+
+                <p class="portfolio-note" id="portfolio-message">
+                    Wszystkie projekty zostaną wyświetlone tutaj.
+                </p>
 
             </div>
+
         </section>
 
 
-        <!-- PROJEKTY -->
-        <section id="projects" class="section">
 
-            <p class="section-label">02 — PROJEKTY</p>
+        <!-- ZAKRES PRAC -->
 
-            <h2>Moje projekty</h2>
+        <section class="section services" id="services">
 
-            <div class="projects-grid">
+            <div class="container">
 
-                <article class="project-card">
+                <div class="section-heading">
 
-                    <div class="project-image">
-                        <span>PROJECT 01</span>
-                    </div>
+                    <span class="section-tag">
+                        03 / ZAKRES PRAC
+                    </span>
 
-                    <div class="project-info">
-                        <p class="project-type">PROGRAMOWANIE</p>
+                    <h2>Co tworzę.</h2>
 
-                        <h3>Nazwa projektu</h3>
+                </div>
+
+
+                <div class="services-list">
+
+                    <div class="service">
+
+                        <span class="service-number">01</span>
+
+                        <h3>Miniaturki</h3>
 
                         <p>
-                            Krótki opis projektu. Napisz tutaj co stworzyłeś,
-                            jakich technologii użyłeś i jaki był cel projektu.
+                            Miniaturki do filmów, materiałów wideo
+                            i innych projektów internetowych.
                         </p>
 
-                        <a href="#" class="project-link">
-                            Zobacz projekt →
-                        </a>
+                        <span class="service-arrow">↗</span>
+
                     </div>
 
-                </article>
 
+                    <div class="service">
 
-                <article class="project-card">
+                        <span class="service-number">02</span>
 
-                    <div class="project-image project-image-2">
-                        <span>PROJECT 02</span>
-                    </div>
-
-                    <div class="project-info">
-                        <p class="project-type">GRAFIKA</p>
-
-                        <h3>Projekt graficzny</h3>
+                        <h3>Grafiki i ilustracje</h3>
 
                         <p>
-                            Opis projektu graficznego. Możesz tutaj pokazać
-                            ilustrację, plakat, model 3D albo inną pracę.
+                            Różnego rodzaju grafiki, ilustracje
+                            i projekty wizualne.
                         </p>
 
-                        <a href="#" class="project-link">
-                            Zobacz projekt →
-                        </a>
+                        <span class="service-arrow">↗</span>
+
                     </div>
 
-                </article>
 
+                    <div class="service">
 
-                <article class="project-card">
+                        <span class="service-number">03</span>
 
-                    <div class="project-image project-image-3">
-                        <span>PROJECT 03</span>
-                    </div>
-
-                    <div class="project-info">
-                        <p class="project-type">WEB</p>
-
-                        <h3>Strona internetowa</h3>
+                        <h3>Profile i logotypy</h3>
 
                         <p>
-                            Opis strony internetowej lub aplikacji,
-                            którą stworzyłeś.
+                            Zdjęcia profilowe, logotypy
+                            i identyfikacja wizualna.
                         </p>
 
-                        <a href="#" class="project-link">
-                            Zobacz projekt →
-                        </a>
+                        <span class="service-arrow">↗</span>
+
                     </div>
 
-                </article>
 
-            </div>
-        </section>
+                    <div class="service">
 
+                        <span class="service-number">04</span>
 
-        <!-- UMIEJĘTNOŚCI -->
-        <section id="skills" class="section">
+                        <h3>Nowe pomysły</h3>
 
-            <p class="section-label">03 — UMIEJĘTNOŚCI</p>
+                        <p>
+                            Jestem otwarty na nowe projekty
+                            i chętnie podejmuję się kolejnych wyzwań.
+                        </p>
 
-            <h2>Technologie</h2>
+                        <span class="service-arrow">↗</span>
 
-            <div class="skills">
-
-                <div class="skill">
-                    <span>HTML</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress html"></div>
                     </div>
-                </div>
 
-                <div class="skill">
-                    <span>CSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress css"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress js"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <span>Python</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress python"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <span>Blender</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress blender"></div>
-                    </div>
                 </div>
 
             </div>
+
         </section>
+
 
 
         <!-- KONTAKT -->
-        <section id="contact" class="section contact">
 
-            <p class="section-label">04 — KONTAKT</p>
+        <section class="section contact" id="contact">
 
-            <h2>Porozmawiajmy.</h2>
+            <div class="container">
 
-            <p>
-                Masz pytanie albo chcesz zobaczyć więcej moich projektów?
-                Napisz do mnie.
-            </p>
+                <span class="section-tag">
+                    04 / KONTAKT
+                </span>
 
-            <a href="mailto:twojemail@example.com" class="email">
-                twojemail@example.com
-            </a>
 
-            <div class="socials">
-                <a href="#">GitHub</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
+                <div class="contact-content">
+
+                    <h2>
+                        Masz pomysł?<br>
+                        <span>Skontaktuj się.</span>
+                    </h2>
+
+                    <p>
+                        Chętnie porozmawiam o nowych projektach,
+                        pomysłach i możliwościach współpracy.
+                        Napisz do mnie lub znajdź mnie na Discordzie.
+                    </p>
+
+
+                    <a
+                        href="mailto:slediodesign@gmail.com"
+                        class="contact-email">
+
+                        slediodesign@gmail.com ↗
+
+                    </a>
+
+
+                    <div class="contact-socials">
+
+                        <a href="mailto:slediodesign@gmail.com">
+                            E-mail
+                        </a>
+
+                        <span>/</span>
+
+                        <span>Discord: Sledio</span>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </section>
@@ -265,11 +430,32 @@
     </main>
 
 
+
     <!-- STOPKA -->
-    <footer>
-        <p>© 2026 Twoje Imię. Wszystkie prawa zastrzeżone.</p>
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#home" class="footer-logo">
+                SLEDIO<span>.</span>
+            </a>
+
+            <p>
+                © 2026 SledioDesign. Wszystkie prawa zastrzeżone.
+            </p>
+
+            <a href="#home" class="back-to-top">
+                Powrót na górę ↑
+            </a>
+
+        </div>
+
     </footer>
 
+
+
+    <!-- SKRYPTY -->
 
     <script src="script.js"></script>
 

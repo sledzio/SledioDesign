@@ -1,0 +1,23 @@
+
+[
+    {
+        "title": "Miniaturka gamingowa",
+        "category": "thumbnails",
+        "image": "images/portfolio/m1.jpg"
+    },
+    {
+        "title": "Autorska ilustracja",
+        "category": "illustration",
+        "image": "images/portfolio/ilustracja-01.png"
+    },
+    {
+        "title": "Zdjęcie profilowe",
+        "category": "profile",
+        "image": "images/portfolio/profilowe-01.jpg"
+    },
+    {
+        "title": "Projekt graficzny",
+        "category": "design",
+        "image": "images/portfolio/projekt-01.jpg"
+    }
+]
