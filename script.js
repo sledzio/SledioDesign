@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectsGrid = document.getElementById("projects-grid");
     const portfolioMessage = document.getElementById("portfolio-message");
     const filterButtons = document.querySelectorAll(".filter");
+    const galleryTrack = document.getElementById("hero-gallery-track");
 
     let projects = [];
     let activeFilter = "all";
@@ -44,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             renderProjects();
 
+            // Uruchomienie animowanego tła
+            renderHeroGallery();
+
         } catch (error) {
 
             console.error("Błąd ładowania portfolio:", error);
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ========================================
-    // GENEROWANIE KART
+    // GENEROWANIE KART PORTFOLIO
     // ========================================
 
     function renderProjects() {
@@ -79,8 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 project.category === activeFilter
             );
 
-
-        // Brak projektów
 
         if (filteredProjects.length === 0) {
 
@@ -99,8 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
-        // Tworzenie kart
 
         filteredProjects.forEach(project => {
 
@@ -133,10 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 errorText.style.color = "#999";
                 errorText.style.fontSize = "12px";
 
-                imageContainer.style.display = "flex";
-                imageContainer.style.alignItems = "center";
-                imageContainer.style.justifyContent = "center";
-
                 imageContainer.appendChild(errorText);
 
             }, { once: true });
@@ -150,17 +146,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const info = document.createElement("div");
             info.className = "project-info";
 
-
             const textContainer = document.createElement("div");
-
 
             const category = document.createElement("span");
             category.textContent = getCategoryName(project.category);
 
-
             const title = document.createElement("h3");
             title.textContent = project.title;
-
 
             textContainer.appendChild(category);
             textContainer.appendChild(title);
@@ -175,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
             info.appendChild(arrow);
 
 
-            // Złożenie karty
+            // Składanie karty
 
             card.appendChild(imageContainer);
             card.appendChild(info);
@@ -189,6 +181,78 @@ document.addEventListener("DOMContentLoaded", () => {
             portfolioMessage.textContent =
                 `Wyświetlono ${filteredProjects.length} projektów.`;
         }
+
+    }
+
+
+    // ========================================
+    // ANIMOWANE TŁO STRONY GŁÓWNEJ
+    // ========================================
+
+    function renderHeroGallery() {
+
+        if (!galleryTrack || projects.length === 0) return;
+
+        galleryTrack.innerHTML = "";
+
+        // Wybieramy grafiki z wszystkich kategorii
+
+        const galleryProjects = projects.filter(project =>
+            project.image
+        );
+
+        if (galleryProjects.length === 0) return;
+
+
+        // Funkcja tworząca pojedynczą grafikę
+
+        function createGalleryItem(project, index) {
+
+            const item = document.createElement("div");
+            item.className = "hero-gallery-item";
+
+            const image = document.createElement("img");
+
+            image.src = project.image;
+            image.alt = "";
+            image.loading = "eager";
+            image.decoding = "async";
+
+            image.addEventListener("error", () => {
+                item.remove();
+            }, { once: true });
+
+            item.appendChild(image);
+
+            // Różne opóźnienia animacji
+
+            item.style.animationDelay = `${-(index % 8)}s`;
+
+            return item;
+
+        }
+
+
+        // Pierwsza połowa galerii
+
+        galleryProjects.forEach((project, index) => {
+
+            galleryTrack.appendChild(
+                createGalleryItem(project, index)
+            );
+
+        });
+
+
+        // Druga połowa - identyczna, aby uzyskać płynną pętlę
+
+        galleryProjects.forEach((project, index) => {
+
+            galleryTrack.appendChild(
+                createGalleryItem(project, index)
+            );
+
+        });
 
     }
 
@@ -212,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ========================================
-    // FILTROWANIE PROJEKTÓW
+    // FILTROWANIE PORTFOLIO
     // ========================================
 
     filterButtons.forEach(button => {
@@ -226,12 +290,11 @@ document.addEventListener("DOMContentLoaded", () => {
             activeFilter = selectedFilter;
 
 
-            // Aktualizacja wyglądu przycisków
+            // Aktualizacja przycisków
 
             filterButtons.forEach(filterButton => {
 
-                const isActive =
-                    filterButton === button;
+                const isActive = filterButton === button;
 
                 filterButton.classList.toggle("active", isActive);
 
@@ -243,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
 
-            // Ponowne wyświetlenie galerii
+            // Ponowne renderowanie portfolio
 
             renderProjects();
 

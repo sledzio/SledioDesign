@@ -1,55 +1,52 @@
 
 [
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #01",
         "category": "thumbnails",
         "image": "images/portfolio/m1.jpg"
     },
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #02",
         "category": "thumbnails",
         "image": "images/portfolio/m2.jpg"
     },
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #03",
         "category": "thumbnails",
         "image": "images/portfolio/m3.jpg"
     },
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #04",
         "category": "thumbnails",
         "image": "images/portfolio/m4.jpg"
     },
-
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #05",
         "category": "thumbnails",
         "image": "images/portfolio/m5.jpg"
     },
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #06",
         "category": "thumbnails",
         "image": "images/portfolio/m6.jpg"
     },
-
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #07",
         "category": "thumbnails",
         "image": "images/portfolio/m7.jpg"
     },
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #08",
         "category": "thumbnails",
         "image": "images/portfolio/m8.jpg"
     },
-
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #09",
         "category": "thumbnails",
         "image": "images/portfolio/m9.jpg"
     },
     {
-        "title": "Przykadowa Miniaturka",
+        "title": "Miniaturka #10",
         "category": "thumbnails",
         "image": "images/portfolio/m10.jpg"
     },
@@ -59,17 +56,17 @@
         "image": "images/portfolio/ilustracja-01.png"
     },
     {
-        "title": "Zdjęcie profilowe",
+        "title": "Zdjęcie profilowe #01",
         "category": "profile",
         "image": "images/portfolio/p1.jpg"
     },
     {
-        "title": "Zdjęcie profilowe",
+        "title": "Zdjęcie profilowe #02",
         "category": "profile",
         "image": "images/portfolio/p2.jpg"
     },
     {
-        "title": "Projekt graficzny",
+        "title": "Projekt graficzny #01",
         "category": "design",
         "image": "images/portfolio/projekt-01.jpg"
     }

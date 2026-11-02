@@ -1,12 +1,13 @@
-
-
+```html
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Sledio Design — portfolio projektów graficznych, miniaturek, ilustracji, zdjęć profilowych i logotypów.">
+    <meta name="description"
+        content="Sledio Design — portfolio projektów graficznych, miniaturek, ilustracji, zdjęć profilowych i logotypów.">
     <meta name="author" content="Sledio">
     <meta name="theme-color" content="#101010">
 
@@ -16,7 +17,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -33,25 +36,31 @@
                 <a href="#home">Start</a>
                 <a href="#about">O mnie</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#services">Zakres prac</a>
                 <a href="#contact" class="nav-contact">Kontakt ↗</a>
             </nav>
 
         </div>
     </header>
 
+
     <main>
 
-        <!-- STRONA GŁÓWNA -->
+        <!-- =========================
+             STRONA GŁÓWNA
+        ========================== -->
         <section class="hero" id="home">
+
+            <!-- ANIMOWANE TŁO Z PRAC PORTFOLIO -->
+            <div class="hero-gallery" aria-hidden="true">
+                <div class="hero-gallery-track" id="hero-gallery-track"></div>
+            </div>
+
+            <!-- CIEMNA WARSTWA NAD GRAFIKAMI -->
+            <div class="hero-overlay"></div>
 
             <div class="container hero-content">
 
                 <div class="hero-text">
-
-                    <span class="section-tag">
-                        SLEDIODESIGN / PORTFOLIO
-                    </span>
 
                     <h1>
                         Portfolio<br>
@@ -78,18 +87,14 @@
 
                 </div>
 
-                <!-- USUNIĘTO DODATKOWY NAPIS S / DESIGN -->
-
-            </div>
-
-            <div class="hero-bottom container">
-                <span>GRAPHIC DESIGN</span>
-                <span>THUMBNAILS · ILLUSTRATIONS · LOGOS</span>
             </div>
 
         </section>
 
-        <!-- O MNIE -->
+
+        <!-- =========================
+             O MNIE
+        ========================== -->
         <section class="section about" id="about">
 
             <div class="container">
@@ -125,30 +130,16 @@
 
                     </div>
 
-                    <div class="about-side">
-
-                        <div class="about-stat">
-                            <span>01</span>
-                            <p>Miniaturki</p>
-                        </div>
-
-                        <div class="about-stat">
-                            <span>02</span>
-                            <p>Grafiki i ilustracje</p>
-                        </div>
-
-                        <div class="about-stat">
-                            <span>03</span>
-                            <p>Zdjęcia profilowe i logotypy</p>
-                        </div>
-
-                    </div>
-
                 </div>
+
             </div>
+
         </section>
 
-        <!-- PORTFOLIO -->
+
+        <!-- =========================
+             PORTFOLIO
+        ========================== -->
         <section class="section portfolio" id="portfolio">
 
             <div class="container">
@@ -167,38 +158,58 @@
 
                 </div>
 
+
                 <!-- FILTRY -->
                 <div class="portfolio-filters" aria-label="Filtry portfolio">
 
-                    <button class="filter active" type="button"
-                        data-filter="all" aria-pressed="true">
+                    <button
+                        class="filter active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
                         Wszystkie
                     </button>
 
-                    <button class="filter" type="button"
-                        data-filter="thumbnails" aria-pressed="false">
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="thumbnails"
+                        aria-pressed="false">
                         Miniaturki
                     </button>
 
-                    <button class="filter" type="button"
-                        data-filter="illustration" aria-pressed="false">
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="illustration"
+                        aria-pressed="false">
                         Grafiki i ilustracje
                     </button>
 
-                    <button class="filter" type="button"
-                        data-filter="profile" aria-pressed="false">
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="profile"
+                        aria-pressed="false">
                         Profile i logotypy
                     </button>
 
-                    <button class="filter" type="button"
-                        data-filter="design" aria-pressed="false">
+                    <button
+                        class="filter"
+                        type="button"
+                        data-filter="design"
+                        aria-pressed="false">
                         Inne projekty
                     </button>
 
                 </div>
 
+
                 <!-- GALERIA -->
-                <div class="projects-grid" id="projects-grid" aria-live="polite">
+                <div
+                    class="projects-grid"
+                    id="projects-grid"
+                    aria-live="polite">
 
                     <div class="projects-loading">
                         Ładowanie projektów...
@@ -206,75 +217,25 @@
 
                 </div>
 
-                <p class="portfolio-note" id="portfolio-message">
+                <p
+                    class="portfolio-note"
+                    id="portfolio-message">
                     Wszystkie projekty zostaną wyświetlone tutaj.
                 </p>
 
             </div>
+
         </section>
 
-        <!-- ZAKRES PRAC -->
-        <section class="section services" id="services">
 
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-tag">03 / ZAKRES PRAC</span>
-                    <h2>Co tworzę.</h2>
-                </div>
-
-                <div class="services-list">
-
-                    <div class="service">
-                        <span class="service-number">01</span>
-                        <h3>Miniaturki</h3>
-                        <p>
-                            Miniaturki do filmów, materiałów wideo
-                            i innych projektów internetowych.
-                        </p>
-                        <span class="service-arrow">↗</span>
-                    </div>
-
-                    <div class="service">
-                        <span class="service-number">02</span>
-                        <h3>Grafiki i ilustracje</h3>
-                        <p>
-                            Różnego rodzaju grafiki, ilustracje
-                            i projekty wizualne.
-                        </p>
-                        <span class="service-arrow">↗</span>
-                    </div>
-
-                    <div class="service">
-                        <span class="service-number">03</span>
-                        <h3>Profile i logotypy</h3>
-                        <p>
-                            Zdjęcia profilowe, logotypy
-                            i identyfikacja wizualna.
-                        </p>
-                        <span class="service-arrow">↗</span>
-                    </div>
-
-                    <div class="service">
-                        <span class="service-number">04</span>
-                        <h3>Nowe pomysły</h3>
-                        <p>
-                            Jestem otwarty na nowe projekty
-                            i chętnie podejmuję się kolejnych wyzwań.
-                        </p>
-                        <span class="service-arrow">↗</span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- KONTAKT -->
+        <!-- =========================
+             KONTAKT
+        ========================== -->
         <section class="section contact" id="contact">
 
             <div class="container">
 
-                <span class="section-tag">04 / KONTAKT</span>
+                <span class="section-tag">03 / KONTAKT</span>
 
                 <div class="contact-content">
 
@@ -289,23 +250,36 @@
                         Napisz do mnie lub znajdź mnie na Discordzie.
                     </p>
 
-                    <a href="mailto:slediodesign@gmail.com" class="contact-email">
+                    <a
+                        href="mailto:slediodesign@gmail.com"
+                        class="contact-email">
                         slediodesign@gmail.com ↗
                     </a>
 
                     <div class="contact-socials">
-                        <a href="mailto:slediodesign@gmail.com">E-mail</a>
+                        <a href="mailto:slediodesign@gmail.com">
+                            E-mail
+                        </a>
+
                         <span>/</span>
-                        <span>Discord: Sledio</span>
+
+                        <span>
+                            Discord: Sledio
+                        </span>
                     </div>
 
                 </div>
+
             </div>
+
         </section>
 
     </main>
 
-    <!-- STOPKA -->
+
+    <!-- =========================
+         STOPKA
+    ========================== -->
     <footer class="footer">
 
         <div class="container footer-content">
@@ -323,9 +297,12 @@
             </a>
 
         </div>
+
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
 </html>
+```
